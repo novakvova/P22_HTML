@@ -1,4 +1,14 @@
-﻿.img_blog {
+﻿.my-container {
+    padding: 0;
+    margin: auto;
+    width: 1280px;
+}
+
+    .my-container .my-center {
+        text-align: center;
+    }
+
+.img_blog {
     border: 2px solid red;
     padding: 10px;
     margin: 15px;
@@ -18,6 +28,7 @@
     .linkTo:hover {
         background-color: #21710b;
     }
+
 img {
     max-width: 300px;
     max-height: 300px
