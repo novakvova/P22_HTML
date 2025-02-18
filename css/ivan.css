@@ -1,0 +1,18 @@
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.my-container {
+  padding: 0;
+  margin: auto;
+  width: 1280px;
+}
+.my-container .my-center {
+  text-align: center;
+}
+.my-container .text-red {
+  color: #ff0000;
+}
+
+/*# sourceMappingURL=ivan.css.map */

@@ -1,0 +1,22 @@
+﻿$screen-size: 1280px;
+$red-color: #ff0000;
+
+
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.my-container {
+    padding: 0;
+    margin: auto;
+    width: $screen-size;
+
+    .my-center {
+        text-align: center;
+    }
+
+    .text-red {
+        color: $red-color;
+    }
+}
