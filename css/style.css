@@ -1,0 +1,24 @@
+﻿.img_blog {
+    border: 2px solid red;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+.linkTo {
+    padding: 10px 20px;
+    color: white;
+    background-color: #3cdb12;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+    .linkTo:hover {
+        background-color: #21710b;
+    }
+img {
+    max-width: 300px;
+    max-height: 300px
+}
