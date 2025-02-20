@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="/bars_ping.png" rel="icon" type="image/png" />
+    <title>Магазин домашніх тварин</title>
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/ivan.css" rel="stylesheet" />
+    <script src="/js/site.js"></script>
+</head>
+
+<body>
+    <script>loadDOM('/partials/header.html')</script>
+
+    <main class="container">
+        <h1 style="font-size: 25pt; color:blue; text-align: center">Реєстрація</h1>
+
+        <form class="col-md-9 col-lg-8 offset-lg-2 offset-md-1">
+
+            <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label for="last_name" class="form-label">Прізвище</label>
+                    <input type="text" class="form-control" name="last_name" id="last_name" />
+                </div>
+
+                <div class="mb-3 col-md-6">
+                    <label for="first_name" class="form-label">Ім'я</label>
+                    <input type="text" class="form-control" name="first_name" id="first_name" />
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="mb-3 col-md-7">
+                    <label for="email" class="form-label">Пошта</label>
+                    <input type="email" class="form-control" name="email" id="email" />
+                </div>
+
+                <div class="mb-3 col-md-5">
+                    <label for="phone" class="form-label">Телефон</label>
+                    <input type="text" class="form-control" name="phone" id="phone" />
+                </div>
+            </div>
+
+
+        </form>
+
+    </main>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
