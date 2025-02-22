@@ -1,0 +1,82 @@
+﻿body {
+    background-color: #8ae5a1;
+}
+
+.dialog {
+    display: none;
+    background-color: #fff;
+    width: 600px;
+    position: fixed;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+
+    header {
+        height: 55px;
+        background: #f66;
+
+        .title {
+            font-size: 20px;
+            float: left;
+            color: white;
+            margin: 15px 0 0 15px;
+        }
+
+        .btn-close {
+            float: right;
+            margin: 5px 10px 0 0;
+            color: #cc3333;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+    }
+
+    main {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        clear: both;
+        color: #332f33;
+        font-size: 20px;
+        margin: 15px;
+
+        img {
+            width: 300px;
+        }
+    }
+
+    footer {
+        margin-top: 25px;
+
+        hr {
+            border: 1px #ececec solid;
+        }
+
+        .buttons {
+            float: right;
+            height: 30px;
+            margin: 10px;
+
+            a {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                border: 1px #ccc solid;
+                padding: 5px 10px;
+                text-decoration: none;
+                color: #333;
+                border-radius: 5px;
+                margin: 3px;
+            }
+
+            .danger {
+                color: #fff;
+                background-color: #f66;
+            }
+
+            a:hover {
+                margin: 1px;
+                border-radius: 0px;
+                padding: 7px 12px;
+            }
+        }
+    }
+}
