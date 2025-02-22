@@ -8,6 +8,12 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/css/ivan.css" rel="stylesheet" />
     <script src="/js/site.js"></script>
+
+    <style>
+        .my-invalid-feedback {
+            color: #9a0e0e;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,17 +22,23 @@
     <main class="container mt-2">
         <h1 style="font-size: 25pt; color:blue; text-align: center">Реєстрація</h1>
 
-        <form class="col-md-9 col-lg-8 offset-lg-2 offset-md-1">
+        <form class="col-md-9 col-lg-8 offset-lg-2 offset-md-1 needs-validation" novalidate>
 
             <div class="row">
                 <div class="mb-3 col-md-6">
                     <label for="last_name" class="form-label">Прізвище</label>
-                    <input type="text" class="form-control" name="last_name" id="last_name" />
+                    <input type="text" class="form-control" name="last_name" id="last_name" required />
+                    <div class="invalid-feedback my-invalid-feedback">
+                        Вкажіть своє прізвище. Бо далі не пущу.
+                    </div>
+                    <div class="valid-feedback">
+                        Дуже добре :)
+                    </div>
                 </div>
 
                 <div class="mb-3 col-md-6">
                     <label for="first_name" class="form-label">Ім'я</label>
-                    <input type="text" class="form-control" name="first_name" id="first_name" />
+                    <input type="text" class="form-control" name="first_name" id="first_name" required />
                 </div>
             </div>
 
@@ -34,19 +46,23 @@
             <div class="row">
                 <div class="mb-3 col-md-7">
                     <label for="email" class="form-label">Пошта</label>
-                    <input type="email" class="form-control" name="email" id="email" />
+                    <input type="email" class="form-control" name="email" id="email" required />
                 </div>
 
                 <div class="mb-3 col-md-5">
                     <label for="phone" class="form-label">Телефон</label>
-                    <input type="text" class="form-control" name="phone" id="phone" />
+                    <input type="text" class="form-control" name="phone" id="phone" required
+                           pattern="^\+38\(\d{3}\)\d{3}-\d{2}-\d{2}$" />
+                    <div class="invalid-feedback">
+                        Введіть номер у форматі +38(xxx)xxx-xx-xx
+                    </div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="mb-3 col-md-8">
                     <label for="photo" class="form-label">Фото</label>
-                    <input type="file" class="form-control" name="photo" id="photo" accept="image/*" />
+                    <input type="file" class="form-control" name="photo" id="photo" accept="image/*"  required/>
                 </div>
                 <div class="mb-3 col-md-4">
                     <label for="photo"
@@ -62,12 +78,15 @@
             <div class="row">
                 <div class="mb-3 col-md-6">
                     <label for="password" class="form-label">Пароль</label>
-                    <input type="password" class="form-control" name="password" id="password" />
+                    <input type="password" class="form-control" name="password" id="password" required minlength="6" />
+                    <div class="invalid-feedback">
+                        Пароль має містити щонайменше 6 символів.
+                    </div>
                 </div>
 
                 <div class="mb-3 col-md-6">
                     <label for="confirm_password" class="form-label">Повторіть пароль</label>
-                    <input type="password" class="form-control" name="confirm_password" id="confirm_password" />
+                    <input type="password" class="form-control" name="confirm_password" id="confirm_password" required />
                 </div>
             </div>
 
@@ -107,5 +126,8 @@
         }
         //console.log("Привіт JavaScript", photo);
     </script>
+
+    <script src="/js/bootstrap_validate.js"></script>
+
 </body>
 </html>
