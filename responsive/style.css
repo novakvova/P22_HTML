@@ -14,6 +14,7 @@
 }
 
 html {
+  font-size: 22px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
@@ -21,6 +22,9 @@ html {
   background-color: #1b54be;
   color: #fff;
   padding: 15px;
+}
+.header h1 {
+  font-size: 2rem;
 }
 
 .menu ul {
@@ -54,6 +58,11 @@ html {
   text-align: center;
   font-size: 16px;
   padding: 15px;
+}
+
+.container {
+  width: 1320px;
+  margin: auto;
 }
 
 .col-1 {
@@ -104,8 +113,48 @@ html {
   width: 100%;
 }
 
+@media only screen and (max-width: 1400px) {
+  .container {
+    width: 1140px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 960px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .container {
+    width: 720px;
+  }
+  .header {
+    background-color: #1b54be;
+    color: #fff;
+    padding: 15px;
+  }
+  .header h1 {
+    font-size: 2rem;
+  }
+}
 @media only screen and (max-width: 768px) {
   [class*=col-] {
+    width: 100%;
+  }
+  .right-panel {
+    display: none;
+  }
+  .container {
+    width: 540px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  [class*=col-] {
+    width: 100%;
+  }
+  .right-panel {
+    display: none;
+  }
+  .container {
     width: 100%;
   }
 }
