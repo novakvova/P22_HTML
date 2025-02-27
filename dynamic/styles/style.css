@@ -41,7 +41,7 @@ h1 {
 
 .background {
   position: relative;
-  background: url("/images/header.jpg") center/cover no-repeat;
+  background: url("/dynamic/images/header.jpg") center/cover no-repeat;
   height: 35rem;
   padding: 1rem;
   color: white;
