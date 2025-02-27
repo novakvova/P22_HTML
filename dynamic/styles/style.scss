@@ -125,6 +125,16 @@ h1 {
     }
 }
 
+
+//#list_news 
+
+#list_news img {
+    object-fit: contain;
+    width: 100%;
+    height: 200px; /* або інший фіксований розмір */
+    display: block;
+}
+
 @media only screen and (max-width: 1200px) {
     .background {
         height: 23rem;
