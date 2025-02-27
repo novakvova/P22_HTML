@@ -1,0 +1,149 @@
+html {
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  padding: 3rem;
+}
+main h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+main h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+main h5 {
+  font-size: 1rem;
+}
+main .additional-text {
+  font-size: 0.75rem;
+  color: rgba(161, 161, 161, 0.8862745098);
+}
+main .main-news img {
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: #eaeaea;
+}
+footer .footer-container {
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.background {
+  position: relative;
+  background: url("/images/header.jpg") center/cover no-repeat;
+  height: 35rem;
+  padding: 1rem;
+  color: white;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.header-content {
+  position: relative;
+  text-align: left;
+  padding: 2rem;
+}
+
+.stats-bar {
+  background-color: #c02;
+  padding: 1rem;
+  color: white;
+  margin: auto;
+}
+.stats-bar h3 {
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 100px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.uniq-text {
+  display: inline-block;
+  font-size: 1.5rem;
+  background-color: rgba(208, 160, 10, 0.6823529412);
+  padding: 0.2rem 0.5rem;
+}
+
+.additional {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.news-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.news-item img {
+  width: 14rem;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.news-item h5 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .background {
+    height: 23rem;
+  }
+  .additional {
+    display: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .background h1 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header [class*=col-] {
+    text-align: center;
+  }
+  main [class*=col-] {
+    width: 100%;
+  }
+  main .news-list {
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .background {
+    height: 20rem;
+  }
+  .background h1 {
+    font-size: 1.25rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
