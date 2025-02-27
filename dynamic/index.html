@@ -228,19 +228,24 @@
     <script>loadDOM('/dynamic/modal_add_news.html')</script>
 
     <script>
-        //const add_news = document.getElementById("add_news");
+        const save_news = document.getElementById("save_news");
         const list_news = document.getElementById("list_news");
 
-        //add_news.onclick = () => {
-        //    //console.log("click btn add news");
-        //    list_news.innerHTML += `
-        //        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12">
-        //            <img class="col-12" src="https://img.tsn.ua/cached/018/tsn-7a7afafe7a64cd96a891771cf6bf5b51/thumbs/1036x648/47/89/11f9f777f1cb7d141b08b3c6d3aa8947.jpeg" alt="news" />
-        //            <h5>Режисер Семен Горов висловився про 14-річного сина і чи планує вивозити його за кордон під час війни</h5>
-        //            <p class="additional-text">08:00, 27.05.25 &nbsp &nbsp<i class="fa-solid fa-eye"></i> 1200</p>
-        //        </div>
-        //        `;
-        //}
+        save_news.onclick = () => {
+            const text = document.getElementById("text").value;
+            const linkImage = document.getElementById("linkImage").value;
+            console.log("Text = ", text);
+            console.log("linkImage = ", linkImage);
+
+            //console.log("click btn add news");
+            list_news.innerHTML += `
+                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <img class="col-12" src="https://img.tsn.ua/cached/018/tsn-7a7afafe7a64cd96a891771cf6bf5b51/thumbs/1036x648/47/89/11f9f777f1cb7d141b08b3c6d3aa8947.jpeg" alt="news" />
+                    <h5>Режисер Семен Горов висловився про 14-річного сина і чи планує вивозити його за кордон під час війни</h5>
+                    <p class="additional-text">08:00, 27.05.25 &nbsp &nbsp<i class="fa-solid fa-eye"></i> 1200</p>
+                </div>
+                `;
+        }
 
     </script>
 </body>
