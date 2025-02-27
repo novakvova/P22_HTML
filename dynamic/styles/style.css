@@ -121,6 +121,16 @@ h1 {
   display: block;
 }
 
+.goods-tile__title {
+  display: block;
+  height: 36px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--global-black);
+}
+
 @media only screen and (max-width: 1200px) {
   .background {
     height: 23rem;
