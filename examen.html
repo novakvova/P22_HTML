@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кастомний Select</title>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 200px;
+        }
+
+        .dropdown-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .dropdown-list {
+            position: absolute;
+            width: 100%;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: none;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+            .dropdown-list .option {
+                display: flex;
+                align-items: center;
+                padding: 8px;
+                cursor: pointer;
+                transition: background 0.2s;
+            }
+
+                .dropdown-list .option:hover {
+                    background: #f0f0f0;
+                }
+
+                .dropdown-list .option img {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 10px;
+                    border-radius: 4px;
+                }
+    </style>
+</head>
+<body>
+
+    <div class="dropdown">
+        <input type="text" class="dropdown-input" placeholder="Виберіть варіант">
+        <div class="dropdown-list">
+            <div class="option" onclick="selectOption(this)">
+                <img src="https://video.rozetka.com.ua/img_superportal/kompyutery_i_noutbuki/kabeli-i-perekhodniki.png" alt="Фото 1"> Варіант 1
+            </div>
+            <div class="option" onclick="selectOption(this)">
+                <img src="https://video.rozetka.com.ua/img_superportal/kompyutery_i_noutbuki/kompyutery.png" alt="Фото 2"> Варіант 2
+            </div>
+            <div class="option" onclick="selectOption(this)">
+                <img src="https://video.rozetka.com.ua/img_superportal/kompyutery_i_noutbuki/monitory.png" alt="Фото 3"> Варіант 3
+            </div>
+        </div>
+        <h2>Сир звичайни</h2>
+    </div>
+
+    <h1>Ковбаси сировялені</h1>
+    <h2>Сир звичайни</h2>
+
+    <script>
+    const input = document.querySelector(".dropdown-input");
+    const dropdownList = document.querySelector(".dropdown-list");
+
+    input.addEventListener("focus", () => {
+        dropdownList.style.display = "block";
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!input.contains(e.target) && !dropdownList.contains(e.target)) {
+            dropdownList.style.display = "none";
+        }
+    });
+
+    function selectOption(element) {
+        input.value = element.textContent.trim();
+        dropdownList.style.display = "none";
+    }
+    </script>
+
+</body>
+</html>
